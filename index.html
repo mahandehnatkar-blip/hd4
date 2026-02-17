@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ورود</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+
+<div class="login-container">
+    <h1>حل معادله درجه دوم </h1>
+    <h2>طراح: ماهــان دهنت کار</h2>
+    <p>هنرستان: دارالفنون</p>
+
+    <label>نام کاربری (فارسی)</label>
+    <input id="username" type="text" placeholder="مثلاً سپهر" oninput="validatePersian(this)">
+
+    <button onclick="login()">ورود</button>
+
+    <div id="login-error"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

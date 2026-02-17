@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>حل معادله درجه دوم</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+
+<div class="container">
+    <h1>حل معادله درجه دوم</h1>
+    <p id="welcome"></p>
+
+    <label>ضریب a</label>
+    <input id="a" type="text" oninput="validateNumber(this)">
+    <label>ضریب b</label>
+    <input id="b" type="text" oninput="validateNumber(this)">
+    <label>ضریب c</label>
+    <input id="c" type="text" oninput="validateNumber(this)">
+
+    <button onclick="solve()">حل معادله</button>
+    <div class="legend">
+        <span style="color:red;">● x₁</span>
+        <span style="color:green; margin-left:10px;">● x₂</span>
+        <span style="color:blue; margin-left:10px;">● رأس</span>
+    </div>
+    <canvas id="graph" width="380" height="250"></canvas>
+    <div class="result" id="output"></div>
+    <button id="downloadBtn" onclick="downloadGraph()" disabled>دانلود نمودار</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

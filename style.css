@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+body {
+    font-family: Vazirmatn, sans-serif;
+    margin: 0;
+    color: white;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;    /* جلوگیری از scroll افقی */
+    overflow-y: auto;      /* scroll عمودی فعال */
+    display: flex;
+    justify-content: center;  /* وسط افقی container */
+    align-items: flex-start;  /* اجازه بالا پایین شدن */
+    padding: 20px 0;
+}
+
+canvas#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    font-size: 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+input.invalid { border-color: red; background: #ffe6e6; }
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background: #071ff3;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+button:hover { background: #071ff3; }
+
+.container, .login-container {
+    background: rgba(0,0,0,0.5);
+    padding: 25px;
+    border-radius: 25px;
+    width: 420px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.result { 
+    margin-top: 15px; 
+    background: rgba(255,255,255,0.1); 
+    padding: 12px; 
+    border-radius: 12px; 
+    line-height: 1.8; 
+    font-size: 14px;
+}
+
+canvas#graph { 
+    margin-top: 15px; 
+    background: white; 
+    border-radius: 12px;
+}
+
+/* Media Queries برای موبایل و تبلت */
+@media (max-width: 1024px) {
+    .container, .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+.legend {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.legend span {
+    font-weight: bold;
+}
